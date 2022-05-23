@@ -11,6 +11,7 @@ const mongoose = require("mongoose")
 mongoose.connect("mongodb+srv://bbaltuntas:bora123@cluster0.biqvq.mongodb.net/test?retryWrites=true&w=majority")
 
 
+
 app.use(express.urlencoded({extended: true}))
 app.use(express.static("public"))
 
