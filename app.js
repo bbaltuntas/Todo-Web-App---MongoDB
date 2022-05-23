@@ -8,7 +8,7 @@ if (port == null || port == "") {
 }
 
 const mongoose = require("mongoose")
-mongoose.connect("mongodb+srv://bbaltuntas:bora155904@cluster0.7qgn8.mongodb.net/test?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://bbaltuntas:bora123@cluster0.biqvq.mongodb.net/test?retryWrites=true&w=majority")
 
 
 app.use(express.urlencoded({extended: true}))
