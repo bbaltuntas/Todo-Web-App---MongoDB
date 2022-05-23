@@ -1,0 +1,1 @@
+var scroll = $(window).scrollTop();

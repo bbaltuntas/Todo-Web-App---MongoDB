@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.w3-button {
+    position: absolute;
+}
+.sidebar-content{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    gap: 1em;
+}
+.btn-show-list {
+    width: 100%;
+    background-color: #A683E3 !important;
+    border: white;
+    border-radius: 0;
+}
+
+.category-item {
+    background-color: #E4E9FD;
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+form > button {
+    border: none;
+    background-color: transparent;
+}
+
+#mySidebar a {
+    text-decoration: none;
+    color: #A683E3;
+    font-weight: bold;
+}
+
+
+.add-category input {
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+
+}
+
+.add-category button {
+    width: 100%;
+    background-color: #A683E3;
+    padding: 0.5em;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+.todo-app {
+    min-height: 100vh;
+    height: auto;
+    background-image: -webkit-linear-gradient(120deg, #A683E3 50%, #E4E9FD 40%);
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* background: linear-gradient(to bottom right, #DD95F7 0%, #9AADF9 50%, #7FC9D9 100%);*/
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.main-cont {
+    min-width: 300px;
+    max-width: 500px;
+    margin-top: 4rem;
+
+}
+
+.date-cont {
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 10px;
+    background-color: #A683E3;
+    color: white;
+    border-radius: 0.2rem;
+    margin-bottom: 2rem;
+}
+
+p {
+    display: inline-block;
+}
+
+.date-cont > h1 {
+    font-size: 2rem;
+}
+
+.item-cont {
+    padding: 0.5rem 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 0.2rem;
+    background-color: #fff;
+}
+
+.new-item {
+    word-break: break-word;
+}
+
+
+input[type= "checkbox"] {
+    margin-right: 0.5rem;;
+}
+
+input[type="checkbox"]:checked + p {
+    text-decoration: #DD95F7 line-through;
+}
+
+.new-item {
+    border-bottom: 0.5px solid rgba(0, 0, 0, 20%);
+    padding: 1rem;
+}
+
+form.form-add {
+    padding: 2%;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+input[type="text"] {
+    border: none;
+    background: transparent;
+}
+
+::placeholder {
+    text-align: center;
+    opacity: 1;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    box-shadow: inset 0 -2px 0 0 #DD95F7;
+}
+
+.button-add {
+    font-size: 1.5rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 100%;
+    border: none;
+    background-color: #DD95F7;
+    color: white;
+}

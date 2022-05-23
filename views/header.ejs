@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--W3School CSS-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- Bootstrap CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="css/styles.css">
+    <!--Fav Icon-->
+    <link rel="shortcut icon" href="images/list-task.svg" type="image/x-icon">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/8769f9bb1f.js" crossorigin="anonymous"></script>
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>To Do App</title>
+</head>
+<body>
+
+<div class="w3-sidebar w3-bar-block w3-border-right" style="display: none" id="mySidebar">
+    <div class="sidebar-content">
+        <button onclick="w3_close()" class="w3-bar-item w3-large" style="text-align: end; padding-bottom: 1em">
+        <span
+                style="color:#A683E3;">
+            <i class="fa-solid fa-arrow-left-long"></i> Close
+        </span>
+        </button>
+
+        <button class="btn btn-light btn-show-list" type="button">
+            <a class="text-white" href="/">Today</a>
+        </button>
+
+        <button class="btn btn-primary btn-show-list" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseExample"
+                aria-expanded="false" aria-controls="collapseExample">
+            Categories <i class="fa-solid fa-caret-down"></i>
+        </button>
+
+        <div class="collapse" id="collapseExample">
+            <% categoryList.forEach(function (value) { %>
+                <form action="/deleteCategory" method="post" class="category-item">
+                    <input type="hidden" name="category" value="<%= value.name %>">
+                    <a href="<%= value.name %>"><%= value.name %></a>
+                    <button type="submit"><span style="color: #DD95F7"><i class="fa-solid fa-xmark"></i></span></button>
+                </form>
+            <% }) %>
+        </div>
+        <div class="add-category">
+            <form action="/addCategory" method="post">
+                <input type="text" name="category" id="category" placeholder="New Category">
+                <button type="submit">Add</button>
+            </form>
+        </div>
+
+    </div>
+</div>
+<button class="w3-button w3-transparent w3-xlarge" onclick="w3_open()"><span style="color: #A683E3">☰</span></button>
